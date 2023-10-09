@@ -10,8 +10,14 @@
 
         public Student(string name, int age, int capacity)
         {
+            if (name == string.Empty)
+                throw new Exception("Неправильное имя");
             Name = name;
+            if (age < 0 && age > 150)
+                throw new Exception("Неправильный возраст");
             Age = age;
+            if (capacity < 0)
+                throw new Exception("Отрицательное значение capacity");
             StudentBag = new Bag(capacity);
         }
 

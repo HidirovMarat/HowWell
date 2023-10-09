@@ -11,7 +11,7 @@
         {
             get { return pizzaPieces; }
             set { if (value < 0)
-                    throw new Exception("Отрицание");
+                    throw new Exception("Отрицательное значение pizzaPieces");
                     pizzaPieces = value; 
                 }
         }
@@ -21,7 +21,7 @@
             set
             {
                 if (value < 0)
-                    throw new Exception("Отрицание");
+                    throw new Exception("Отрицательное значение sodaBottles");
                 sodaBottles = value;
             }
         }
@@ -31,7 +31,7 @@
             set
             {
                 if (value < 0)
-                    throw new Exception("Отрицание");
+                    throw new Exception("Отрицательное значение capacity");
                 capacity = value;
             }
         }
