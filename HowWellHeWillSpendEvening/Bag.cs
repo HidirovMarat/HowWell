@@ -4,10 +4,37 @@
     {
         private const double pizzaPiecesEqualLiter = 0.3;
         private const double sodaBottlesEqualLiter = 0.5;
-
-        public int PizzaPieces { get; set;}
-        public int SodaBottles { get; set;}
-        public double Capacity { get; set;}
+        private int pizzaPieces;
+        private int sodaBottles;
+        private double capacity;
+        public int PizzaPieces 
+        {
+            get { return pizzaPieces; }
+            set { if (value < 0)
+                    throw new Exception("Отрицание");
+                    pizzaPieces = value; 
+                }
+        }
+        public int SodaBottles
+        {
+            get { return sodaBottles; }
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Отрицание");
+                sodaBottles = value;
+            }
+        }
+        public double Capacity
+        {
+            get { return capacity; }
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Отрицание");
+                capacity = value;
+            }
+        }
 
         public Bag(double capacity)
         {
