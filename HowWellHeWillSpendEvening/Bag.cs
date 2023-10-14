@@ -2,37 +2,39 @@
 {
     public class Bag
     {
-        private const double pizzaPiecesEqualLiter = 0.3;
-        private const double sodaBottlesEqualLiter = 0.5;
-        private int pizzaPieces;
-        private int sodaBottles;
-        private double capacity;
+        private const double PizzaPiecesEqualLiter = 0.3;
+        private const double SodaBottlesEqualLiter = 0.5;
+
+        private int _pizzaPieces;
+        private int _sodaBottles;
+        private double _capacity;
+
         public int PizzaPieces 
         {
-            get { return pizzaPieces; }
+            get { return _pizzaPieces; }
             set { if (value < 0)
                     throw new Exception("Отрицательное значение pizzaPieces");
-                    pizzaPieces = value; 
+                    _pizzaPieces = value; 
                 }
         }
         public int SodaBottles
         {
-            get { return sodaBottles; }
+            get { return _sodaBottles; }
             set
             {
                 if (value < 0)
                     throw new Exception("Отрицательное значение sodaBottles");
-                sodaBottles = value;
+                _sodaBottles = value;
             }
         }
         public double Capacity
         {
-            get { return capacity; }
+            get { return _capacity; }
             set
             {
                 if (value < 0)
                     throw new Exception("Отрицательное значение capacity");
-                capacity = value;
+                _capacity = value;
             }
         }
 
@@ -53,9 +55,9 @@
             return freeSpace >= PizzaPiecesToLiter(sodaBottles);
         }
 
-        private double PizzaPiecesToLiter (int pizzaPieces) => pizzaPieces * pizzaPiecesEqualLiter;
+        private double PizzaPiecesToLiter (int pizzaPieces) => pizzaPieces * PizzaPiecesEqualLiter;
 
-        private double SodaBottlesToLiter(int sodaBottles) => sodaBottles * sodaBottlesEqualLiter;
+        private double SodaBottlesToLiter(int sodaBottles) => sodaBottles * SodaBottlesEqualLiter;
 
     }
 }

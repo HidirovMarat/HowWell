@@ -2,8 +2,8 @@
 {
     public class Student
     {
-        private const double fullPizza  = 10;
-        private const double fullSoda = 15;
+        private const double FullPizza  = 10;
+        private const double FullSoda = 15;
         public string Name { get; private set; }
         public int Age { get ; private set ; }
         public Bag StudentBag { get; private set; }
@@ -42,9 +42,9 @@
             double ratio = Ratio(student.Age);
             int pizzaPieces = student.StudentBag.PizzaPieces;
 
-            if (pizzaPieces * ratio > fullPizza)
+            if (pizzaPieces * ratio > FullPizza)
                 return "переел";
-            if (pizzaPieces * ratio < fullPizza)
+            if (pizzaPieces * ratio < FullPizza)
                 return "голоден";
             return "в самый раз";
         }
@@ -54,9 +54,9 @@
             double ratio = Ratio(student.Age);
             int sodaBottles = student.StudentBag.SodaBottles;
 
-            if (sodaBottles * ratio > fullSoda)
+            if (sodaBottles * ratio > FullSoda)
                 return "перепил";
-            if (sodaBottles * ratio < fullSoda)
+            if (sodaBottles * ratio < FullSoda)
                 return "недопил";
             return "в самый раз";
         }

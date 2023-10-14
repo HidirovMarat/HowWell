@@ -2,6 +2,8 @@
 
 namespace Test
 {
+   
+
     internal class Program
     {
         static void Main(string[] args)
@@ -15,6 +17,7 @@ namespace Test
                 Console.WriteLine("Не влезает");
                 return;
             }
+
             student.StudentBag.PizzaPieces += countPizza;
             Console.WriteLine("Сколько банок газировки?");
             int countSoda = int.Parse(Console.ReadLine());
@@ -23,10 +26,10 @@ namespace Test
                 Console.WriteLine("Не влезает");
                 return;
             }
+
             student.StudentBag.SodaBottles += countSoda;
             string countSatiety = student.CountSatiety(student);
             string countDrunk = student.CountCarbonation(student);
-
             Console.WriteLine(
                 $"    - Имя студента: {student.Name}\r\n" +
                 $"    - Количество взятых кусков пиццы:{student.StudentBag.PizzaPieces}\r\n" +
